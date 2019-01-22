@@ -26,6 +26,7 @@ package fr.opensagres.xdocreport.document.tools;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
 import fr.opensagres.xdocreport.core.io.IOUtils;
 import fr.opensagres.xdocreport.document.tools.internal.StringBuilderOutputStream;
@@ -57,9 +58,12 @@ public abstract class AbstractDataProvider
     public String getDataAsString()
         throws IOException
     {
+        // InputStreamReader isr = new InputStreamReader(getData(), "UTF8");
         StringBuilderOutputStream writer = new StringBuilderOutputStream();
         IOUtils.copy( getData(), writer );
-        return writer.toString();
+        String data = writer.toString();
+        System.out.print("JSON Data: " + data);
+        return data;
     }
 
 }

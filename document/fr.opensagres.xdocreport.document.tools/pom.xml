@@ -6,6 +6,8 @@
 		<version>2.0.1</version>
 	</parent>
 
+	<version>2.0.1.1</version>
+
 	<artifactId>fr.opensagres.xdocreport.document.tools</artifactId>
 	<build>
 
